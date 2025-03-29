@@ -12,8 +12,8 @@ def jogar_jogo_do_saber():
     letras_adivinhadas = set()
     tentativas = 6  
 
-    print("🎓 Bem-vindo ao Jogo do Saber! 🎓")
-
+    print(" Bem-vindo ao Jogo do Saber! ")
+    print("Uma pista são palavras da União")
     while tentativas > 0:
         palavra_oculta = " ".join([letra if letra in letras_adivinhadas else "_" for letra in palavra])
         print("\nPalavra:", palavra_oculta)
@@ -34,11 +34,12 @@ def jogar_jogo_do_saber():
             tentativas -= 1
 
         if letras_corretas.issubset(letras_adivinhadas):
-            print(f"🎉 Parabéns! Você acertou a palavra: {palavra} 🎉")
+            print(f" Parabéns! Você acertou a palavra: {palavra} ")
             break
 
     if tentativas == 0:
-        print(f"💀 Fim de jogo! A palavra era: {palavra}")
+        print(f" Fim de jogo! A palavra era: {palavra}")
 
+#Este codigo represinta a inicialização de uma aplicaçao
 if __name__ == "__main__":
     jogar_jogo_do_saber()
